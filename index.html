@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Conversor Termométrico</title>
+  <link rel = "shortcut icon" type = "imagem/x-icon" href = "assets/Logo-TI.png"/>
+  <link href="style.css" rel="stylesheet">
+</head>
+  
+<body>
+  <div class='container'>
+    <div class='header'>
+      <p id='conversor-texto'>Conversor</p>
+      <img src="assets/Logo-TI.svg"/>
+    </div>
+    
+    <form class='entradas' id='dados' onsubmit='submitForm(event)'> 
+      <div>
+        <label>Valor:</label>
+        <input id='grau' type='number' placeholder='Insira aqui.' required>
+      </div>
+      
+      <div>
+        <label>Ponto de:</label>
+        <select id='valor-select'>
+          <option selected disabled>Selecione...</option>
+          <option value="gelo">Gelo</option>
+          <option value="ebulicao">Ebulição</option>
+        </select>
+      </div>
+
+      
+      <div class='escalas'>
+        <p id='C'>0 C°</p>
+        <p id='F'>0 F°</p>
+        <p id='K'>0 K°</p>
+      </div>
+
+      
+      
+      <button onclick='calculo_Escala()'>Calcular</button>
+    </form>
+  </div>
+  
+  <div class='container-dois'>
+    <div class='itens-calculo'>
+      
+      <button onclick='converter_escala()'>Converter</button>
+      
+      <input class='valor-escala' id='valor-escala' type='number' placeholder='Insira aqui...'>
+    </div>
+    
+    <p id='mostrar-conversão'>0 C°</p>
+    
+  </div>
+  
+  <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
